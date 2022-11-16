@@ -14,6 +14,8 @@ import android.text.TextUtils
 import android.view.KeyEvent
 import com.v2ray.ang.AppConfig
 import android.content.res.ColorStateList
+import android.provider.Settings
+import android.provider.Settings.Secure
 import com.google.android.material.navigation.NavigationView
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
@@ -62,7 +64,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        title = getString(R.string.title_server)
+        title = getString(R.string.app_name)
         setSupportActionBar(binding.toolbar)
 
         binding.fab.setOnClickListener {
@@ -103,6 +105,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         toggle.syncState()
         binding.navView.setNavigationItemSelectedListener(this)
         binding.version.text = "v${BuildConfig.VERSION_NAME} (${SpeedtestUtil.getLibVersion()})"
+
+        binding.tvDeviceId.text = getString(R.string.device_id) + " " + Secure.getString(contentResolver, Secure.ANDROID_ID);
+
 
         setupViewModel()
         copyAssets()
@@ -387,10 +392,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             subid
         }
         val append = subid.isNullOrEmpty()
+        val deviceId = Secure.getString(contentResolver, Secure.ANDROID_ID)
 
-        var count = AngConfigManager.importBatchConfig(server, subid2, append)
+        var count = AngConfigManager.importBatchConfig(server, subid2, append, deviceId)
         if (count <= 0) {
-            count = AngConfigManager.importBatchConfig(Utils.decode(server!!), subid2, append)
+            count = AngConfigManager.importBatchConfig(Utils.decode(server!!), subid2, append, deviceId)
         }
         if (count > 0) {
             toast(R.string.toast_success)

@@ -116,6 +116,7 @@
                         android:gravity="center"
                         android:nextFocusLeft="@+id/info_container"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         android:padding="@dimen/layout_margin_spacing">
 
                         <ImageView
@@ -135,6 +136,7 @@
                         android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         android:padding="@dimen/layout_margin_spacing">
 
                         <ImageView
@@ -170,6 +172,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:orientation="vertical"
+                    android:visibility="gone"
                     android:paddingEnd="5dp">
 
                     <TextView

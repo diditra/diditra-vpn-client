@@ -68,6 +68,29 @@
                             android:textColor="@color/colorWhite" />
 
                     </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layout_device_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/connection_test_height"
+                        android:background="?attr/colorPrimary"
+                        android:gravity="center|left"
+                        android:nextFocusRight="@+id/fab"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:nextFocusLeft="@+id/recycler_view">
+
+                        <TextView
+                            android:id="@+id/tv_device_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:minLines="1"
+                            android:paddingStart="16dp"
+                            android:text="@string/device_id"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
 
@@ -76,7 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"
-                    android:layout_marginBottom="24dp">
+                    android:layout_marginBottom="72dp">
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/fab"

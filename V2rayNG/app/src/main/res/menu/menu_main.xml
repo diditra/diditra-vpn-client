@@ -17,26 +17,32 @@
             <item
                 android:id="@+id/import_manually_vmess"
                 android:title="@string/menu_item_import_config_manually_vmess"
+                android:visible="false"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/import_manually_vless"
                 android:title="@string/menu_item_import_config_manually_vless"
+                android:visible="false"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/import_manually_ss"
                 android:title="@string/menu_item_import_config_manually_ss"
+                android:visible="false"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/import_manually_socks"
                 android:title="@string/menu_item_import_config_manually_socks"
+                android:visible="false"
                 app:showAsAction="never" />
             <item
                 android:id="@+id/import_manually_trojan"
                 android:title="@string/menu_item_import_config_manually_trojan"
+                android:visible="false"
                 app:showAsAction="never" />
 
             <item
                 android:title="@string/menu_item_import_config_custom"
+                android:visible="false"
                 app:showAsAction="always">
                 <menu>
                     <item
@@ -82,6 +88,7 @@
         android:id="@+id/export_all"
         android:icon="@drawable/ic_share_white_24dp"
         android:title="@string/title_export_all"
+        android:visible="false"
         app:showAsAction="never" />
     <item
         android:id="@+id/ping_all"

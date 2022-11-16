@@ -2,6 +2,7 @@ package com.v2ray.ang.ui
 
 import android.Manifest
 import android.content.*
+import android.provider.Settings.Secure
 import com.tbruyelle.rxpermissions.RxPermissions
 import com.v2ray.ang.R
 import com.v2ray.ang.util.AngConfigManager
@@ -32,7 +33,8 @@ class ScScannerActivity : BaseActivity() {
 
     private val scanQRCode = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == RESULT_OK) {
-            val count = AngConfigManager.importBatchConfig(it.data?.getStringExtra("SCAN_RESULT"), "", false)
+            val deviceId = Secure.getString(contentResolver, Secure.ANDROID_ID);
+            val count = AngConfigManager.importBatchConfig(it.data?.getStringExtra("SCAN_RESULT"), "", false, deviceId)
             if (count > 0) {
                 toast(R.string.toast_success)
             } else {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">v2rayNG</string>
+    <string name="app_name" translatable="false">DDVPN</string>
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
@@ -66,6 +66,7 @@
     <string name="toast_none_data">There is nothing</string>
     <string name="toast_incorrect_protocol">Incorrect protocol</string>
     <string name="toast_decoding_failed">Decoding failed</string>
+    <string name="toast_incorrect_device">Incorrect device</string>
     <string name="title_file_chooser">Select a Config File</string>
     <string name="toast_require_file_manager">Please install a File Manager.</string>
     <string name="server_customize_config">Customize Config</string>
@@ -202,6 +203,8 @@
     <string name="connection_test_error_status_code">Error code: #%d</string>
     <string name="connection_connected">Connected, tap to check connection</string>
     <string name="connection_not_connected">Not connected</string>
+
+    <string name="device_id">Device ID:</string>
 
     <string-array name="share_method">
         <item>QRcode</item>

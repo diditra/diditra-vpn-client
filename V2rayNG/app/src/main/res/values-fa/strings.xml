@@ -66,6 +66,7 @@
     <string name="toast_none_data">چیزی نیست</string>
     <string name="toast_incorrect_protocol">پروتکل نادرست</string>
     <string name="toast_decoding_failed">رمزگشایی انجام نشد</string>
+    <string name="toast_incorrect_device">عدم تطابق با دستگاه</string>
     <string name="title_file_chooser">انتخاب پرونده پیکربندی</string>
     <string name="toast_require_file_manager">لطفا یک مدیر پرونده نصب کنید.</string>
     <string name="server_customize_config">سفارشی‌سازی پیکربندی</string>
@@ -200,6 +201,8 @@
     <string name="connection_test_error_status_code">کد خطا: #%d</string>
     <string name="connection_connected">متصل است، برای بررسی اتصال ضربه بزنید</string>
     <string name="connection_not_connected">متصل نیست</string>
+
+    <string name="device_id">کد دستگاه:</string>
 
     <string-array name="share_method">
         <item>QRcode</item>

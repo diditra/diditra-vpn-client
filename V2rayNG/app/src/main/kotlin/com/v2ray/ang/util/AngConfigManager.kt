@@ -12,6 +12,7 @@ import com.v2ray.ang.AppConfig
 import com.v2ray.ang.AppConfig.ANG_CONFIG
 import com.v2ray.ang.AppConfig.HTTPS_PROTOCOL
 import com.v2ray.ang.AppConfig.HTTP_PROTOCOL
+import com.v2ray.ang.AppConfig.ZZA_PROTOCOL
 import com.v2ray.ang.R
 import com.v2ray.ang.dto.*
 import com.v2ray.ang.dto.V2rayConfig.Companion.DEFAULT_SECURITY
@@ -168,7 +169,7 @@ object AngConfigManager {
     /**
      * import config form qrcode or...
      */
-    private fun importConfig(str: String?, subid: String, removedSelectedServer: ServerConfig?): Int {
+    private fun importConfig(str: String?, subid: String, removedSelectedServer: ServerConfig?, deviceId: String?): Int {
         try {
             if (str == null || TextUtils.isEmpty(str)) {
                 return R.string.toast_none_data
@@ -182,20 +183,31 @@ object AngConfigManager {
 
             var config: ServerConfig? = null
             val allowInsecure = settingsStorage?.decodeBool(AppConfig.PREF_ALLOW_INSECURE) ?: false
-            if (str.startsWith(EConfigType.VMESS.protocolScheme)) {
+
+            var definitiveUri = str.toString()
+            val isZza = definitiveUri.startsWith(ZZA_PROTOCOL)
+            if (isZza) {
+                definitiveUri = definitiveUri.replace(ZZA_PROTOCOL, "")
+                definitiveUri = Utils.decode(definitiveUri)
+                if (TextUtils.isEmpty(definitiveUri)) {
+                    return R.string.toast_decoding_failed
+                }
+            }
+
+            if (definitiveUri.startsWith(EConfigType.VMESS.protocolScheme)) {
                 config = ServerConfig.create(EConfigType.VMESS)
                 val streamSetting = config.outboundBean?.streamSettings ?: return -1
 
                 var fingerprint = streamSetting.tlsSettings?.fingerprint
 
 
-                if (!tryParseNewVmess(str, config, allowInsecure)) {
-                    if (str.indexOf("?") > 0) {
+                if (!tryParseNewVmess(definitiveUri, config, allowInsecure)) {
+                    if (definitiveUri.indexOf("?") > 0) {
                         if (!tryResolveVmess4Kitsunebi(str, config)) {
                             return R.string.toast_incorrect_protocol
                         }
                     } else {
-                        var result = str.replace(EConfigType.VMESS.protocolScheme, "")
+                        var result = definitiveUri.replace(EConfigType.VMESS.protocolScheme, "")
                         result = Utils.decode(result)
                         if (TextUtils.isEmpty(result)) {
                             return R.string.toast_decoding_failed
@@ -208,6 +220,10 @@ object AngConfigManager {
                                 || TextUtils.isEmpty(vmessQRCode.net)
                         ) {
                             return R.string.toast_incorrect_protocol
+                        }
+
+                        if (isZza && vmessQRCode.id != deviceId) {
+                            return R.string.toast_incorrect_device
                         }
 
                         config.remarks = vmessQRCode.ps
@@ -226,10 +242,10 @@ object AngConfigManager {
                                 if (TextUtils.isEmpty(vmessQRCode.sni)) sni else vmessQRCode.sni, fingerprint, vmessQRCode.alpn)
                     }
                 }
-            } else if (str.startsWith(EConfigType.SHADOWSOCKS.protocolScheme)) {
+            } else if (definitiveUri.startsWith(EConfigType.SHADOWSOCKS.protocolScheme)) {
                 config = ServerConfig.create(EConfigType.SHADOWSOCKS)
-                if (!tryResolveResolveSip002(str, config)) {
-                    var result = str.replace(EConfigType.SHADOWSOCKS.protocolScheme, "")
+                if (!tryResolveResolveSip002(definitiveUri, config)) {
+                    var result = definitiveUri.replace(EConfigType.SHADOWSOCKS.protocolScheme, "")
                     val indexSplit = result.indexOf("#")
                     if (indexSplit > 0) {
                         try {
@@ -259,8 +275,8 @@ object AngConfigManager {
                         server.method = match.groupValues[1].lowercase()
                     }
                 }
-            } else if (str.startsWith(EConfigType.SOCKS.protocolScheme)) {
-                var result = str.replace(EConfigType.SOCKS.protocolScheme, "")
+            } else if (definitiveUri.startsWith(EConfigType.SOCKS.protocolScheme)) {
+                var result = definitiveUri.replace(EConfigType.SOCKS.protocolScheme, "")
                 val indexSplit = result.indexOf("#")
                 config = ServerConfig.create(EConfigType.SOCKS)
                 if (indexSplit > 0) {
@@ -292,8 +308,8 @@ object AngConfigManager {
                     socksUsersBean.pass = match.groupValues[2]
                     server.users = listOf(socksUsersBean)
                 }
-            } else if (str.startsWith(EConfigType.TROJAN.protocolScheme)) {
-                val uri = URI(Utils.fixIllegalUrl(str))
+            } else if (definitiveUri.startsWith(EConfigType.TROJAN.protocolScheme)) {
+                val uri = URI(Utils.fixIllegalUrl(definitiveUri))
                 config = ServerConfig.create(EConfigType.TROJAN)
                 config.remarks = Utils.urlDecode(uri.fragment ?: "")
 
@@ -319,8 +335,8 @@ object AngConfigManager {
                     server.password = uri.userInfo
                     server.flow = flow
                 }
-            } else if (str.startsWith(EConfigType.VLESS.protocolScheme)) {
-                val uri = URI(Utils.fixIllegalUrl(str))
+            } else if (definitiveUri.startsWith(EConfigType.VLESS.protocolScheme)) {
+                val uri = URI(Utils.fixIllegalUrl(definitiveUri))
                 val queryParam = uri.rawQuery.split("&")
                     .associate { it.split("=").let { (k, v) -> k to Utils.urlDecode(v) } }
                 config = ServerConfig.create(EConfigType.VLESS)
@@ -709,7 +725,7 @@ object AngConfigManager {
         }
     }
 
-    fun importBatchConfig(servers: String?, subid: String, append: Boolean): Int {
+    fun importBatchConfig(servers: String?, subid: String, append: Boolean, deviceId: String?): Int {
         try {
             if (servers == null) {
                 return 0
@@ -736,7 +752,7 @@ object AngConfigManager {
             var count = 0
             servers.lines()
                     .forEach {
-                        val resId = importConfig(it, subid, removedSelectedServer)
+                        val resId = importConfig(it, subid, removedSelectedServer, deviceId)
                         if (resId == 0) {
                             count++
                         }

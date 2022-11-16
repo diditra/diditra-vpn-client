@@ -3,6 +3,7 @@ package com.v2ray.ang.ui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings
 import com.google.zxing.WriterException
 import com.v2ray.ang.R
 import com.v2ray.ang.databinding.ActivityLogcatBinding
@@ -36,7 +37,8 @@ class UrlSchemeActivity : BaseActivity() {
                 }
             }
             toast(shareUrl)
-            val count = AngConfigManager.importBatchConfig(shareUrl, "", false)
+            val deviceId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID);
+            val count = AngConfigManager.importBatchConfig(shareUrl, "", false, deviceId)
             if (count > 0) {
                 toast(R.string.toast_success)
             } else {

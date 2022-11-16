@@ -19,7 +19,7 @@
                 android:title="@string/title_user_asset_setting" />
     </group>
 
-    <group android:id="@+id/group_id2">
+    <group android:id="@+id/group_id2" android:visible="false">
         <item
             android:id="@+id/promotion"
             android:icon="@drawable/ic_whatshot_white_24dp"
