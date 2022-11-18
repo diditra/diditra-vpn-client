@@ -60,6 +60,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val deviceId: String? = Secure.getString(contentResolver, Secure.ANDROID_ID)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
@@ -91,8 +92,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
 
         binding.layoutDeviceId.setOnClickListener {
-            Utils.setClipboard(this, binding.tvDeviceId.text.toString())
-            toast(getString(R.string.toast_copied_to_clipboard))
+            deviceId?.let {
+                Utils.setClipboard(this, deviceId)
+                toast(getString(R.string.toast_copied_to_clipboard))
+            }
         }
 
         binding.recyclerView.setHasFixedSize(true)
@@ -111,7 +114,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.navView.setNavigationItemSelectedListener(this)
         binding.version.text = "v${BuildConfig.VERSION_NAME} (${SpeedtestUtil.getLibVersion()})"
 
-        binding.tvDeviceId.text = getString(R.string.device_id) + " " + Secure.getString(contentResolver, Secure.ANDROID_ID);
+        binding.tvDeviceId.text = getString(R.string.device_id) + " " + deviceId;
 
 
         setupViewModel()
