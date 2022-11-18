@@ -90,6 +90,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
         }
 
+        binding.layoutDeviceId.setOnClickListener {
+            Utils.setClipboard(this, binding.tvDeviceId.text.toString())
+            toast(getString(R.string.toast_copied_to_clipboard))
+        }
+
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter

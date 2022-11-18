@@ -8,6 +8,7 @@
     <string name="navigation_drawer_close">بستن منو کشویی</string>
     <string name="migration_success">موفقیت در انتقال داده!</string>
     <string name="migration_fail">انتقال داده انجام نشد!</string>
+    <string name="toast_copied_to_clipboard">کپی شد!</string>
 
     <!-- Notifications -->
     <string name="notification_action_stop_v2ray">متوقف</string>

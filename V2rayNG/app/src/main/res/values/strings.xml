@@ -8,6 +8,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="migration_success">Data migration success!</string>
     <string name="migration_fail">Data migration failed!</string>
+    <string name="toast_copied_to_clipboard">Copied to clipboard</string>
 
     <!-- Notifications -->
     <string name="notification_action_stop_v2ray">Stop</string>
@@ -24,7 +25,7 @@
     <string name="menu_item_save_config">Save config</string>
     <string name="menu_item_del_config">Delete config</string>
     <string name="menu_item_import_config_qrcode">Import config from QRcode</string>
-    <string name="menu_item_import_config_clipboard">Import config from Clipboard</string>
+    <string name="menu_item_import_config_clipboard">Import config from clipboard</string>
     <string name="menu_item_import_config_manually_vmess">Type manually[Vmess]</string>
     <string name="menu_item_import_config_manually_vless">Type manually[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">Type manually[Shadowsocks]</string>
