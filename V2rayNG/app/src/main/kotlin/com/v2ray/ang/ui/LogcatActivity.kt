@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.os.Handler
 import android.os.Looper
@@ -8,11 +8,11 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.lifecycle.lifecycleScope
-import com.v2ray.ang.AppConfig.ANG_PACKAGE
-import com.v2ray.ang.R
-import com.v2ray.ang.databinding.ActivityLogcatBinding
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.AppConfig.ANG_PACKAGE
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.databinding.ActivityLogcatBinding
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

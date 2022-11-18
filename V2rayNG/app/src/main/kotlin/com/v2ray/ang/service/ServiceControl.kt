@@ -1,4 +1,4 @@
-package com.v2ray.ang.service
+package com.diditra.vpn_client.service
 
 import android.app.Service
 

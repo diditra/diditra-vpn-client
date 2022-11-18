@@ -1,14 +1,14 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import com.google.zxing.WriterException
-import com.v2ray.ang.R
-import com.v2ray.ang.databinding.ActivityLogcatBinding
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.util.AngConfigManager
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.databinding.ActivityLogcatBinding
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.util.AngConfigManager
 
 class UrlSchemeActivity : BaseActivity() {
     private lateinit var binding: ActivityLogcatBinding

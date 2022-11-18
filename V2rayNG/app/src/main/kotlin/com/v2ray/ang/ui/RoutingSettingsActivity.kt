@@ -1,11 +1,11 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.os.Bundle
-import com.v2ray.ang.R
+import com.diditra.vpn_client.R
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.databinding.ActivityRoutingSettingsBinding
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.databinding.ActivityRoutingSettingsBinding
 
 class RoutingSettingsActivity : BaseActivity() {
     private lateinit var binding: ActivityRoutingSettingsBinding

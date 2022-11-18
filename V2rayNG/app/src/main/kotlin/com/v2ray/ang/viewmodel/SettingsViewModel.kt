@@ -1,4 +1,4 @@
-package com.v2ray.ang.viewmodel
+package com.diditra.vpn_client.viewmodel
 
 import android.app.Application
 import android.content.SharedPreferences
@@ -6,8 +6,8 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.util.MmkvManager
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.util.MmkvManager
 
 class SettingsViewModel(application: Application) : AndroidViewModel(application), SharedPreferences.OnSharedPreferenceChangeListener {
 

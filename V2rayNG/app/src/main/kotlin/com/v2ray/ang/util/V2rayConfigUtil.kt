@@ -1,17 +1,17 @@
-package com.v2ray.ang.util
+package com.diditra.vpn_client.util
 
 import android.content.Context
 import android.text.TextUtils
 import android.util.Log
 import com.google.gson.*
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.AppConfig.ANG_PACKAGE
-import com.v2ray.ang.dto.V2rayConfig
-import com.v2ray.ang.dto.EConfigType
-import com.v2ray.ang.dto.ERoutingMode
-import com.v2ray.ang.dto.V2rayConfig.Companion.DEFAULT_NETWORK
-import com.v2ray.ang.dto.V2rayConfig.Companion.HTTP
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.AppConfig.ANG_PACKAGE
+import com.diditra.vpn_client.dto.V2rayConfig
+import com.diditra.vpn_client.dto.EConfigType
+import com.diditra.vpn_client.dto.ERoutingMode
+import com.diditra.vpn_client.dto.V2rayConfig.Companion.DEFAULT_NETWORK
+import com.diditra.vpn_client.dto.V2rayConfig.Companion.HTTP
 
 object V2rayConfigUtil {
     private val serverRawStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SERVER_RAW, MMKV.MULTI_PROCESS_MODE) }

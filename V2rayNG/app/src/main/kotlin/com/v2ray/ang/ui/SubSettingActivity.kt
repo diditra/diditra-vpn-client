@@ -1,14 +1,14 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
-import com.v2ray.ang.R
+import com.diditra.vpn_client.R
 import android.os.Bundle
-import com.v2ray.ang.databinding.ActivitySubSettingBinding
-import com.v2ray.ang.dto.SubscriptionItem
-import com.v2ray.ang.util.MmkvManager
+import com.diditra.vpn_client.databinding.ActivitySubSettingBinding
+import com.diditra.vpn_client.dto.SubscriptionItem
+import com.diditra.vpn_client.util.MmkvManager
 
 class SubSettingActivity : BaseActivity() {
     private lateinit var binding: ActivitySubSettingBinding

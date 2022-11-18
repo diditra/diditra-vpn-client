@@ -1,12 +1,12 @@
-package com.v2ray.ang.util
+package com.diditra.vpn_client.util
 
 import android.content.Context
 import android.os.SystemClock
 import android.text.TextUtils
 import android.util.Log
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
-import com.v2ray.ang.extension.responseLength
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.extension.responseLength
 import kotlinx.coroutines.isActive
 import libv2ray.Libv2ray
 import java.io.IOException

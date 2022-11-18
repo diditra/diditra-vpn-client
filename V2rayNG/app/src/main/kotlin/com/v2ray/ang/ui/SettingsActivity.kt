@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,10 @@ import android.text.TextUtils
 import android.view.View
 import androidx.activity.viewModels
 import androidx.preference.*
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
-import com.v2ray.ang.util.Utils
-import com.v2ray.ang.viewmodel.SettingsViewModel
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.util.Utils
+import com.diditra.vpn_client.viewmodel.SettingsViewModel
 
 class SettingsActivity : BaseActivity() {
     private val settingsViewModel: SettingsViewModel by viewModels()
@@ -50,28 +50,6 @@ class SettingsActivity : BaseActivity() {
                 startActivity(Intent(activity, RoutingSettingsActivity::class.java))
                 false
             }
-
-//            licenses.onClick {
-//                val fragment = LicensesDialogFragment.Builder(act)
-//                        .setNotices(R.raw.licenses)
-//                        .setIncludeOwnLicense(false)
-//                        .build()
-//                fragment.show((act as AppCompatActivity).supportFragmentManager, null)
-//            }
-//
-//            feedback.onClick {
-//                Utils.openUri(activity, "https://github.com/2dust/v2rayNG/issues")
-//            }
-//            tgGroup.onClick {
-//                //                Utils.openUri(activity, "https://t.me/v2rayN")
-//                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("tg:resolve?domain=v2rayN"))
-//                try {
-//                    startActivity(intent)
-//                } catch (e: Exception) {
-//                    e.printStackTrace()
-//                    toast(R.string.toast_tg_app_not_found)
-//                }
-//            }
 
             perAppProxy?.setOnPreferenceClickListener {
                 startActivity(Intent(activity, PerAppProxyActivity::class.java))
@@ -177,6 +155,6 @@ class SettingsActivity : BaseActivity() {
     }
 
     fun onModeHelpClicked(view: View) {
-        Utils.openUri(this, AppConfig.v2rayNGWikiMode)
+        Utils.openUri(this, AppConfig.DDVPNWikiMode)
     }
 }

@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.content.Context
 import android.os.Build
@@ -6,9 +6,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.MenuItem
 import androidx.annotation.RequiresApi
-import com.v2ray.ang.util.MyContextWrapper
-import com.v2ray.ang.R
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.util.MyContextWrapper
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.util.Utils
 
 abstract class BaseActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {

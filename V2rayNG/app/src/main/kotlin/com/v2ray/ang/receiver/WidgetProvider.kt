@@ -1,4 +1,4 @@
-package com.v2ray.ang.receiver
+package com.diditra.vpn_client.receiver
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -8,10 +8,10 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.widget.RemoteViews
-import com.v2ray.ang.R
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.service.V2RayServiceManager
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.service.V2RayServiceManager
+import com.diditra.vpn_client.util.Utils
 
 class WidgetProvider : AppWidgetProvider() {
     /**

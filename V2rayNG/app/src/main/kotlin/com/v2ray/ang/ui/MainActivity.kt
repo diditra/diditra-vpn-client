@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.Manifest
 import android.content.*
@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import com.tbruyelle.rxpermissions.RxPermissions
-import com.v2ray.ang.R
+import com.diditra.vpn_client.R
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.KeyEvent
-import com.v2ray.ang.AppConfig
+import com.diditra.vpn_client.AppConfig
 import android.content.res.ColorStateList
 import android.provider.Settings
 import android.provider.Settings.Secure
@@ -28,18 +28,18 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig.ANG_PACKAGE
-import com.v2ray.ang.BuildConfig
-import com.v2ray.ang.databinding.ActivityMainBinding
-import com.v2ray.ang.dto.EConfigType
-import com.v2ray.ang.extension.toast
+import com.diditra.vpn_client.AppConfig.ANG_PACKAGE
+import com.diditra.vpn_client.BuildConfig
+import com.diditra.vpn_client.databinding.ActivityMainBinding
+import com.diditra.vpn_client.dto.EConfigType
+import com.diditra.vpn_client.extension.toast
 import rx.Observable
 import rx.android.schedulers.AndroidSchedulers
 import java.util.concurrent.TimeUnit
-import com.v2ray.ang.helper.SimpleItemTouchHelperCallback
-import com.v2ray.ang.service.V2RayServiceManager
-import com.v2ray.ang.util.*
-import com.v2ray.ang.viewmodel.MainViewModel
+import com.diditra.vpn_client.helper.SimpleItemTouchHelperCallback
+import com.diditra.vpn_client.service.V2RayServiceManager
+import com.diditra.vpn_client.util.*
+import com.diditra.vpn_client.viewmodel.MainViewModel
 import kotlinx.coroutines.*
 import me.drakeet.support.toast.ToastCompat
 import java.io.File
@@ -654,7 +654,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 startActivity(Intent(this, UserAssetActivity::class.java))
             }
             R.id.feedback -> {
-                Utils.openUri(this, AppConfig.v2rayNGIssues)
+                Utils.openUri(this, AppConfig.DDVPNIssues)
             }
             R.id.promotion -> {
                 Utils.openUri(this, "${Utils.decode(AppConfig.promotionUrl)}?t=${System.currentTimeMillis()}")

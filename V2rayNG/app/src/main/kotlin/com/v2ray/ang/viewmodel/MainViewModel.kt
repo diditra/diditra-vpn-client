@@ -1,4 +1,4 @@
-package com.v2ray.ang.viewmodel
+package com.diditra.vpn_client.viewmodel
 
 import android.app.Application
 import android.content.*
@@ -11,15 +11,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AngApplication
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.AppConfig.ANG_PACKAGE
-import com.v2ray.ang.R
-import com.v2ray.ang.databinding.DialogConfigFilterBinding
-import com.v2ray.ang.dto.*
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.util.*
-import com.v2ray.ang.util.MmkvManager.KEY_ANG_CONFIGS
+import com.diditra.vpn_client.AngApplication
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.AppConfig.ANG_PACKAGE
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.databinding.DialogConfigFilterBinding
+import com.diditra.vpn_client.dto.*
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.util.*
+import com.diditra.vpn_client.util.MmkvManager.KEY_ANG_CONFIGS
 import kotlinx.coroutines.*
 import java.util.*
 

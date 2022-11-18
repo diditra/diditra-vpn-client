@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -11,15 +11,15 @@ import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.AppConfig.ANG_PACKAGE
-import com.v2ray.ang.R
-import com.v2ray.ang.databinding.ActivityBypassListBinding
-import com.v2ray.ang.dto.AppInfo
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.extension.v2RayApplication
-import com.v2ray.ang.util.AppManagerUtil
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.AppConfig.ANG_PACKAGE
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.databinding.ActivityBypassListBinding
+import com.diditra.vpn_client.dto.AppInfo
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.extension.v2RayApplication
+import com.diditra.vpn_client.util.AppManagerUtil
+import com.diditra.vpn_client.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

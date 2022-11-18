@@ -1,4 +1,4 @@
-package com.v2ray.ang.util
+package com.diditra.vpn_client.util
 
 import android.content.ClipboardManager
 import android.content.Context
@@ -22,13 +22,13 @@ import android.util.Log
 import android.util.Patterns
 import android.webkit.URLUtil
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.AppConfig.ANG_PACKAGE
-import com.v2ray.ang.BuildConfig
-import com.v2ray.ang.R
-import com.v2ray.ang.extension.toast
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.AppConfig.ANG_PACKAGE
+import com.diditra.vpn_client.BuildConfig
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.extension.toast
 import java.net.*
-import com.v2ray.ang.service.V2RayServiceManager
+import com.diditra.vpn_client.service.V2RayServiceManager
 import java.io.IOException
 
 object Utils {
@@ -378,7 +378,7 @@ object Utils {
         val url = URL(urlStr)
         val conn = url.openConnection()
         conn.setRequestProperty("Connection", "close")
-        conn.setRequestProperty("User-agent", "v2rayNG/${BuildConfig.VERSION_NAME}")
+        conn.setRequestProperty("User-agent", "DDVPN/${BuildConfig.VERSION_NAME}")
         url.userInfo?.let {
             conn.setRequestProperty("Authorization",
                 "Basic ${encode(urlDecode(it))}")

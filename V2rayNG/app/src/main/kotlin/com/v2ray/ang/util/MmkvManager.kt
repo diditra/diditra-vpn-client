@@ -1,10 +1,10 @@
-package com.v2ray.ang.util
+package com.diditra.vpn_client.util
 
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.dto.ServerAffiliationInfo
-import com.v2ray.ang.dto.ServerConfig
-import com.v2ray.ang.dto.SubscriptionItem
+import com.diditra.vpn_client.dto.ServerAffiliationInfo
+import com.diditra.vpn_client.dto.ServerConfig
+import com.diditra.vpn_client.dto.SubscriptionItem
 
 object MmkvManager {
     const val ID_MAIN = "MAIN"

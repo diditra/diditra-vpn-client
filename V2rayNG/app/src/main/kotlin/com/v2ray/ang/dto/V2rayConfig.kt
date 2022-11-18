@@ -1,4 +1,4 @@
-package com.v2ray.ang.dto
+package com.diditra.vpn_client.dto
 
 import android.text.TextUtils
 import com.google.gson.GsonBuilder

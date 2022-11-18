@@ -1,14 +1,14 @@
-package com.v2ray.ang.service
+package com.diditra.vpn_client.service
 
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
-import com.v2ray.ang.AppConfig.MSG_MEASURE_CONFIG
-import com.v2ray.ang.AppConfig.MSG_MEASURE_CONFIG_CANCEL
-import com.v2ray.ang.AppConfig.MSG_MEASURE_CONFIG_SUCCESS
-import com.v2ray.ang.util.MessageUtil
-import com.v2ray.ang.util.SpeedtestUtil
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.AppConfig.MSG_MEASURE_CONFIG
+import com.diditra.vpn_client.AppConfig.MSG_MEASURE_CONFIG_CANCEL
+import com.diditra.vpn_client.AppConfig.MSG_MEASURE_CONFIG_SUCCESS
+import com.diditra.vpn_client.util.MessageUtil
+import com.diditra.vpn_client.util.SpeedtestUtil
+import com.diditra.vpn_client.util.Utils
 import go.Seq
 import kotlinx.coroutines.*
 import libv2ray.Libv2ray

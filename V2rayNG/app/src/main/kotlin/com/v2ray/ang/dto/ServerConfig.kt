@@ -1,9 +1,9 @@
-package com.v2ray.ang.dto
+package com.diditra.vpn_client.dto
 
-import com.v2ray.ang.AppConfig.TAG_AGENT
-import com.v2ray.ang.AppConfig.TAG_BLOCKED
-import com.v2ray.ang.AppConfig.TAG_DIRECT
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.AppConfig.TAG_AGENT
+import com.diditra.vpn_client.AppConfig.TAG_BLOCKED
+import com.diditra.vpn_client.AppConfig.TAG_DIRECT
+import com.diditra.vpn_client.util.Utils
 
 data class ServerConfig(
         val configVersion: Int = 3,

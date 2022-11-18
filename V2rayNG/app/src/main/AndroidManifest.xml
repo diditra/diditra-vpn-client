@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.v2ray.ang">
+    package="com.diditra.vpn_client">
 
     <supports-screens
         android:anyDensity="true"
@@ -105,7 +105,7 @@
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="v2rayng"
+                <data android:scheme="ddvpn"
                     android:host="install-config" />
             </intent-filter>
         </activity>
@@ -145,8 +145,8 @@
                     android:resource="@xml/app_widget_provider" />
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.v2ray.ang.action.widget.click" />
-                <action android:name="com.v2ray.ang.action.activity" />
+                <action android:name="com.diditra.vpn_client.action.widget.click" />
+                <action android:name="com.diditra.vpn_client.activity" />
             </intent-filter>
         </receiver>
 

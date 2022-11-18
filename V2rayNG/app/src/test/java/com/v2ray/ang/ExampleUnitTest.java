@@ -1,4 +1,4 @@
-package com.v2ray.ang;
+package com.diditra.vpn_client;
 
 import org.junit.Test;
 

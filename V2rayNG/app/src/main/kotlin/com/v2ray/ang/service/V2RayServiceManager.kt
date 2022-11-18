@@ -1,4 +1,4 @@
-package com.v2ray.ang.service
+package com.diditra.vpn_client.service
 
 import android.app.*
 import android.content.BroadcastReceiver
@@ -11,18 +11,18 @@ import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.AppConfig.ANG_PACKAGE
-import com.v2ray.ang.AppConfig.TAG_DIRECT
-import com.v2ray.ang.R
-import com.v2ray.ang.dto.ServerConfig
-import com.v2ray.ang.extension.toSpeedString
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.ui.MainActivity
-import com.v2ray.ang.util.MessageUtil
-import com.v2ray.ang.util.MmkvManager
-import com.v2ray.ang.util.Utils
-import com.v2ray.ang.util.V2rayConfigUtil
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.AppConfig.ANG_PACKAGE
+import com.diditra.vpn_client.AppConfig.TAG_DIRECT
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.dto.ServerConfig
+import com.diditra.vpn_client.extension.toSpeedString
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.ui.MainActivity
+import com.diditra.vpn_client.util.MessageUtil
+import com.diditra.vpn_client.util.MmkvManager
+import com.diditra.vpn_client.util.Utils
+import com.diditra.vpn_client.util.V2rayConfigUtil
 import go.Seq
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -299,7 +299,7 @@ object V2RayServiceManager {
     @RequiresApi(Build.VERSION_CODES.O)
     private fun createNotificationChannel(): String {
         val channelId = "RAY_NG_M_CH_ID"
-        val channelName = "V2rayNG Background Service"
+        val channelName = "DDVPN Background Service"
         val chan = NotificationChannel(channelId,
                 channelName, NotificationManager.IMPORTANCE_HIGH)
         chan.lightColor = Color.DKGRAY

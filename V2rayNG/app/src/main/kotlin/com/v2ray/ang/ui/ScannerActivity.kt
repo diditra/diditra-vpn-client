@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.Manifest
 import android.app.Activity
@@ -12,9 +12,9 @@ import android.view.MenuItem
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.zxing.BarcodeFormat
 import com.tbruyelle.rxpermissions.RxPermissions
-import com.v2ray.ang.R
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.util.QRCodeDecoder
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.util.QRCodeDecoder
 
 class ScannerActivity : BaseActivity(), ZXingScannerView.ResultHandler {
 

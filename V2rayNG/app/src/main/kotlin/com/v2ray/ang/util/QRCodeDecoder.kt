@@ -1,4 +1,4 @@
-package com.v2ray.ang.util
+package com.diditra.vpn_client.util
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory

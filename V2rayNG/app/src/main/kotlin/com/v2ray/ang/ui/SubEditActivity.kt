@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -7,12 +7,12 @@ import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.R
-import com.v2ray.ang.databinding.ActivitySubEditBinding
-import com.v2ray.ang.dto.SubscriptionItem
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.util.MmkvManager
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.databinding.ActivitySubEditBinding
+import com.diditra.vpn_client.dto.SubscriptionItem
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.util.MmkvManager
+import com.diditra.vpn_client.util.Utils
 
 class SubEditActivity : BaseActivity() {
     private lateinit var binding: ActivitySubEditBinding

@@ -1,4 +1,4 @@
-package com.v2ray.ang.service
+package com.diditra.vpn_client.service
 
 import android.app.Service
 import android.content.Context
@@ -11,12 +11,12 @@ import android.os.StrictMode
 import android.util.Log
 import androidx.annotation.RequiresApi
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
-import com.v2ray.ang.dto.ERoutingMode
-import com.v2ray.ang.util.MmkvManager
-import com.v2ray.ang.util.MyContextWrapper
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.dto.ERoutingMode
+import com.diditra.vpn_client.util.MmkvManager
+import com.diditra.vpn_client.util.MyContextWrapper
+import com.diditra.vpn_client.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

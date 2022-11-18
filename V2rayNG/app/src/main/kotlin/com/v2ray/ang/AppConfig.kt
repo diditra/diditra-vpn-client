@@ -1,11 +1,11 @@
-package com.v2ray.ang
+package com.diditra.vpn_client
 
 /**
  *
  * App Config Const
  */
 object AppConfig {
-    const val ANG_PACKAGE = "com.v2ray.ang"
+    const val ANG_PACKAGE = "com.diditra.vpn_client"
     const val DIR_ASSETS = "assets"
 
     // legacy
@@ -44,9 +44,9 @@ object AppConfig {
     const val HTTPS_PROTOCOL: String = "https://"
     const val ZZA_PROTOCOL: String = "zza://"
 
-    const val BROADCAST_ACTION_SERVICE = "com.v2ray.ang.action.service"
-    const val BROADCAST_ACTION_ACTIVITY = "com.v2ray.ang.action.activity"
-    const val BROADCAST_ACTION_WIDGET_CLICK = "com.v2ray.ang.action.widget.click"
+    const val BROADCAST_ACTION_SERVICE = "com.diditra.vpn_client.action.service"
+    const val BROADCAST_ACTION_ACTIVITY = "com.diditra.vpn_client.action.activity"
+    const val BROADCAST_ACTION_WIDGET_CLICK = "com.diditra.vpn_client.action.widget.click"
 
     const val TASKER_EXTRA_BUNDLE = "com.twofortyfouram.locale.intent.extra.BUNDLE"
     const val TASKER_EXTRA_STRING_BLURB = "com.twofortyfouram.locale.intent.extra.BLURB"
@@ -60,8 +60,8 @@ object AppConfig {
 
     const val androidpackagenamelistUrl = "https://raw.githubusercontent.com/2dust/androidpackagenamelist/master/proxy.txt"
     const val v2rayCustomRoutingListUrl = "https://raw.githubusercontent.com/2dust/v2rayCustomRoutingList/master/"
-    const val v2rayNGIssues = "https://github.com/2dust/v2rayNG/issues"
-    const val v2rayNGWikiMode = "https://github.com/2dust/v2rayNG/wiki/Mode"
+    const val DDVPNIssues = "https://github.com/opiran-zza/diditra-vpn-client/issues"
+    const val DDVPNWikiMode = "https://github.com/opiran-zza/diditra-vpn-client/wiki/Mode"
     const val promotionUrl = "aHR0cHM6Ly85LjIzNDQ1Ni54eXovYWJjLmh0bWw="
     const val geoUrl = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/";
 

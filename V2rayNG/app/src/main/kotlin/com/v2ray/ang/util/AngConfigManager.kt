@@ -1,4 +1,4 @@
-package com.v2ray.ang.util
+package com.diditra.vpn_client.util
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,19 +8,19 @@ import android.util.Log
 import androidx.preference.PreferenceManager
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.AppConfig.ANG_CONFIG
-import com.v2ray.ang.AppConfig.HTTPS_PROTOCOL
-import com.v2ray.ang.AppConfig.HTTP_PROTOCOL
-import com.v2ray.ang.AppConfig.ZZA_PROTOCOL
-import com.v2ray.ang.R
-import com.v2ray.ang.dto.*
-import com.v2ray.ang.dto.V2rayConfig.Companion.DEFAULT_SECURITY
-import com.v2ray.ang.dto.V2rayConfig.Companion.TLS
-import com.v2ray.ang.util.MmkvManager.KEY_SELECTED_SERVER
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.AppConfig.ANG_CONFIG
+import com.diditra.vpn_client.AppConfig.HTTPS_PROTOCOL
+import com.diditra.vpn_client.AppConfig.HTTP_PROTOCOL
+import com.diditra.vpn_client.AppConfig.ZZA_PROTOCOL
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.dto.*
+import com.diditra.vpn_client.dto.V2rayConfig.Companion.DEFAULT_SECURITY
+import com.diditra.vpn_client.dto.V2rayConfig.Companion.TLS
+import com.diditra.vpn_client.util.MmkvManager.KEY_SELECTED_SERVER
 import java.net.URI
 import java.util.*
-import com.v2ray.ang.extension.idnHost
+import com.diditra.vpn_client.extension.idnHost
 
 object AngConfigManager {
     private val mainStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_MAIN, MMKV.MULTI_PROCESS_MODE) }

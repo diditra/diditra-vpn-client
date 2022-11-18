@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

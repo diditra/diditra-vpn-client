@@ -1,12 +1,12 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import com.v2ray.ang.R
-import com.v2ray.ang.databinding.ItemRecyclerBypassListBinding
-import com.v2ray.ang.dto.AppInfo
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.databinding.ItemRecyclerBypassListBinding
+import com.diditra.vpn_client.dto.AppInfo
 import java.util.*
 
 class PerAppProxyAdapter(val activity: BaseActivity, val apps: List<AppInfo>, blacklist: MutableSet<String>?) :

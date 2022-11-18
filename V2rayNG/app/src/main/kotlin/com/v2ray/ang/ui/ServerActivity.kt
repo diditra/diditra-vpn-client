@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -8,18 +8,18 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.AppConfig.PREF_ALLOW_INSECURE
-import com.v2ray.ang.R
-import com.v2ray.ang.dto.EConfigType
-import com.v2ray.ang.dto.ServerConfig
-import com.v2ray.ang.dto.V2rayConfig
-import com.v2ray.ang.dto.V2rayConfig.Companion.DEFAULT_PORT
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.util.MmkvManager
-import com.v2ray.ang.util.MmkvManager.ID_MAIN
-import com.v2ray.ang.util.MmkvManager.KEY_SELECTED_SERVER
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.AppConfig.PREF_ALLOW_INSECURE
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.dto.EConfigType
+import com.diditra.vpn_client.dto.ServerConfig
+import com.diditra.vpn_client.dto.V2rayConfig
+import com.diditra.vpn_client.dto.V2rayConfig.Companion.DEFAULT_PORT
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.util.MmkvManager
+import com.diditra.vpn_client.util.MmkvManager.ID_MAIN
+import com.diditra.vpn_client.util.MmkvManager.KEY_SELECTED_SERVER
+import com.diditra.vpn_client.util.Utils
 
 class ServerActivity : BaseActivity() {
 

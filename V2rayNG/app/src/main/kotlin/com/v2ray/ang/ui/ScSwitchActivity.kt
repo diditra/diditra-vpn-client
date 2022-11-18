@@ -1,9 +1,9 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
-import com.v2ray.ang.R
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.util.Utils
 import android.os.Bundle
-import com.v2ray.ang.service.V2RayServiceManager
+import com.diditra.vpn_client.service.V2RayServiceManager
 
 class ScSwitchActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.v2ray.ang.receiver
+package com.diditra.vpn_client.receiver
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -6,11 +6,11 @@ import android.content.Intent
 import android.text.TextUtils
 import com.google.zxing.WriterException
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.service.V2RayServiceManager
-import com.v2ray.ang.util.MmkvManager
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.service.V2RayServiceManager
+import com.diditra.vpn_client.util.MmkvManager
 
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.util.Utils
 
 class TaskerReceiver : BroadcastReceiver() {
     private val mainStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_MAIN, MMKV.MULTI_PROCESS_MODE) }

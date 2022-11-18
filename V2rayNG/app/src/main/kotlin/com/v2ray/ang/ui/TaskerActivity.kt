@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.app.Activity
 import android.os.Bundle
@@ -6,16 +6,16 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import java.util.ArrayList
-import com.v2ray.ang.R
+import com.diditra.vpn_client.R
 import android.content.Intent
 import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import com.google.zxing.WriterException
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.databinding.ActivityTaskerBinding
-import com.v2ray.ang.util.MmkvManager
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.databinding.ActivityTaskerBinding
+import com.diditra.vpn_client.util.MmkvManager
 
 class TaskerActivity : BaseActivity() {
     private lateinit var binding: ActivityTaskerBinding

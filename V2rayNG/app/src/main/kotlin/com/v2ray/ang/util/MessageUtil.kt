@@ -1,10 +1,10 @@
-package com.v2ray.ang.util
+package com.diditra.vpn_client.util
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.service.V2RayTestService
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.service.V2RayTestService
 import java.io.Serializable
 
 

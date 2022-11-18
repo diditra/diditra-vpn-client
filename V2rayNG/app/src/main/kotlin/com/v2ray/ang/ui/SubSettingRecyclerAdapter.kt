@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.content.Intent
 import android.graphics.Color
@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.R
-import com.v2ray.ang.databinding.ItemRecyclerSubSettingBinding
-import com.v2ray.ang.util.MmkvManager
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.databinding.ItemRecyclerSubSettingBinding
+import com.diditra.vpn_client.util.MmkvManager
 
 class SubSettingRecyclerAdapter(val activity: SubSettingActivity) : RecyclerView.Adapter<SubSettingRecyclerAdapter.MainViewHolder>() {
 

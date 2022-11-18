@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -9,14 +9,14 @@ import androidx.appcompat.app.AlertDialog
 import com.blacksquircle.ui.language.json.JsonLanguage
 import com.google.gson.*
 import com.tencent.mmkv.MMKV
-import com.v2ray.ang.R
-import com.v2ray.ang.databinding.ActivityServerCustomConfigBinding
-import com.v2ray.ang.dto.EConfigType
-import com.v2ray.ang.dto.ServerConfig
-import com.v2ray.ang.dto.V2rayConfig
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.util.MmkvManager
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.databinding.ActivityServerCustomConfigBinding
+import com.diditra.vpn_client.dto.EConfigType
+import com.diditra.vpn_client.dto.ServerConfig
+import com.diditra.vpn_client.dto.V2rayConfig
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.util.MmkvManager
+import com.diditra.vpn_client.util.Utils
 import me.drakeet.support.toast.ToastCompat
 
 class ServerCustomConfigActivity : BaseActivity() {

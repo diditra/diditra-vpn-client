@@ -1,4 +1,4 @@
-package com.v2ray.ang.ui
+package com.diditra.vpn_client.ui
 
 import android.Manifest
 import android.app.Activity.RESULT_OK
@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager
 import com.tbruyelle.rxpermissions.RxPermissions
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
-import com.v2ray.ang.databinding.FragmentRoutingSettingsBinding
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.extension.v2RayApplication
-import com.v2ray.ang.util.Utils
+import com.diditra.vpn_client.AppConfig
+import com.diditra.vpn_client.R
+import com.diditra.vpn_client.databinding.FragmentRoutingSettingsBinding
+import com.diditra.vpn_client.extension.toast
+import com.diditra.vpn_client.extension.v2RayApplication
+import com.diditra.vpn_client.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
