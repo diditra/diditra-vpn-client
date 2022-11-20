@@ -19,7 +19,7 @@ android {
         targetSdkVersion Integer.parseInt("$targetSdkVer")
         multiDexEnabled true
         versionCode 486
-        versionName "1.0.0"
+        versionName "1.0.2"
     }
 
     if (props["sign"]) {

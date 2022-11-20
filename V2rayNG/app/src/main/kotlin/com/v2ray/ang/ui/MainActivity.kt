@@ -403,9 +403,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         val deviceId = Secure.getString(contentResolver, Secure.ANDROID_ID)
 
         var count = AngConfigManager.importBatchConfig(server, subid2, append, deviceId)
-        if (count <= 0) {
-            count = AngConfigManager.importBatchConfig(Utils.decode(server!!), subid2, append, deviceId)
-        }
         if (count > 0) {
             toast(R.string.toast_success)
             mainViewModel.reloadServerList()

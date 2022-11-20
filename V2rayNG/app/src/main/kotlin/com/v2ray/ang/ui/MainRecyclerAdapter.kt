@@ -142,16 +142,14 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                 }
             }
             holder.itemMainBinding.layoutRemove.setOnClickListener {
-                if (guid != mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER)) {
-                    if (settingsStorage?.decodeBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
-                        AlertDialog.Builder(mActivity).setMessage(R.string.del_config_comfirm)
-                            .setPositiveButton(android.R.string.ok) { _, _ ->
-                                removeServer(guid, position)
-                            }
-                            .show()
-                    } else {
-                        removeServer(guid, position)
-                    }
+                if (settingsStorage?.decodeBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
+                    AlertDialog.Builder(mActivity).setMessage(R.string.del_config_comfirm)
+                        .setPositiveButton(android.R.string.ok) { _, _ ->
+                            removeServer(guid, position)
+                        }
+                        .show()
+                } else {
+                    removeServer(guid, position)
                 }
             }
 

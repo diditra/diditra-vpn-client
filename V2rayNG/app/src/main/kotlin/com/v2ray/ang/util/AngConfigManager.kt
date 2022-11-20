@@ -222,8 +222,13 @@ object AngConfigManager {
                             return R.string.toast_incorrect_protocol
                         }
 
-                        if (isZza && vmessQRCode.id != deviceId) {
-                            return R.string.toast_incorrect_device
+                        if (isZza) {
+                            if (deviceId == null) {
+                                return R.string.toast_incorrect_device
+                            }
+                            if (!vmessQRCode.id.startsWith(deviceId)) {
+                                return R.string.toast_incorrect_device
+                            }
                         }
 
                         config.remarks = vmessQRCode.ps
